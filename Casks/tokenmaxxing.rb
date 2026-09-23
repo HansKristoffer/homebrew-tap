@@ -1,0 +1,26 @@
+# Template: the release workflow fills in 0.1.0 / $SHA_* and pushes it to
+# HansKristoffer/homebrew-tap as Casks/tokenmaxxing.rb.
+cask "tokenmaxxing" do
+  arch arm: "arm64", intel: "x86_64"
+
+  version "0.1.0"
+  sha256 arm:   "1aadbd69611b8cdcf1bd91b03b401bfa1c2e393d5dddf5b4c316a6e328fbd519",
+         intel: "b8446aa47331d7d98b87b44a8f4be90728750323e55b5447641ad0e77c25b2e0"
+
+  url "https://github.com/HansKristoffer/tokenmaxxing/releases/download/v#{version}/Tokenmaxxing-#{version}-#{arch}.zip"
+  name "Tokenmaxxing"
+  desc "Menu bar leaderboard for AI coding agent token usage"
+  homepage "https://github.com/HansKristoffer/tokenmaxxing"
+
+  depends_on macos: ">= :sonoma"
+
+  app "Tokenmaxxing.app"
+
+  uninstall quit: "dk.hanskristoffer.tokenmaxxing"
+
+  zap trash: [
+    "~/Library/Application Support/Tokenmaxxing",
+    "~/Library/Logs/Tokenmaxxing",
+    "~/Library/Preferences/dk.hanskristoffer.tokenmaxxing.plist",
+  ]
+end
