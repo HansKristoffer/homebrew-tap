@@ -2,9 +2,9 @@
 cask "tokenmaxxing" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "0.2.1"
-  sha256 arm:   "d2c2859f668fa339fbf5bae767d13006e22aaa80e8da58178a04c5d1120f55c5",
-         intel: "8dafe7871a45ee62464723f0134bcfac45a8c394fbce6295987e7f26a8d1305a"
+  version "0.3.0"
+  sha256 arm:   "363b1198ea58aa5652d1ceedc274518dcb0344ec4819c7b7cd46730fb13d9536",
+         intel: "27d868c41b1b3a9485ac6ad3249d30de51c56b009b40b09ee1d45b7bbc8f0c0d"
 
   url "https://github.com/HansKristoffer/tokenmaxxing/releases/download/v#{version}/Tokenmaxxing-#{version}-#{arch}.zip"
   name "Tokenmaxxing"
